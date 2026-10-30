@@ -62,3 +62,7 @@ button:active, .btn:active, .btn-open:active { transform: translate(4px, 4px); b
 
 /* Tombol musik: di atas menu bawah */
 #musicBtn { bottom: calc(var(--nav-h, 64px) + 14px + env(safe-area-inset-bottom, 0px)); }
+
+/* Nama putra di pembuka: muat di layar kecil */
+.script-names { font-size: clamp(1.05rem, 6.6vw, 2.2rem) !important; line-height: 1.6 !important; letter-spacing: 0 !important; overflow-wrap: anywhere; word-break: normal; padding: 0 .25rem; text-shadow: 2px 2px 0 #1a0b33 !important; filter: none !important; }
+.script-names span { display: block; }
