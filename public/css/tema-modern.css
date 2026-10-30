@@ -1,0 +1,64 @@
+/* Tema khitanan: pixel retro (ungu, kuning, pink). Ditumpuk di atas style.css */
+:root {
+  --maroon: #5b2a9d; --maroon-dark: #2f1458; --maroon-mid: #43207a;
+  --gold: #ffc93c; --gold-soft: #fff0b8; --gold-deep: #f59f00;
+  --cream: #fff8e7; --ink: #2b1650; --ink-soft: #5f4a86; --light: #f3e9ff;
+  --gold-grad: linear-gradient(#ffc93c, #ffc93c);
+  --px: #ff6b8b; --shadow: 6px 6px 0 rgba(0, 0, 0, .5);
+}
+*, *::before, *::after { border-radius: 0 !important; }
+html { font-size: 18px; }
+body, p, li, label, input, textarea, select, small, td, th { font-family: 'VT323', monospace !important; }
+body { background: conic-gradient(#3a1a6e 25%, #2f1458 0 50%, #3a1a6e 0 75%, #2f1458 0) 0 0 / 32px 32px; image-rendering: pixelated; }
+.ambient, .fx { display: none !important; }
+
+/* Judul dan tombol pakai font 8-bit */
+h1, h2, h3, .sec-title, .cover-intro, .cover-names, .cover-date, button, .btn, .btn-open, .slider-count, .cover-guest strong {
+  font-family: 'Press Start 2P', monospace !important; font-weight: 400 !important; letter-spacing: 0 !important; line-height: 1.7 !important; text-transform: none !important;
+}
+.sec-title { color: var(--gold) !important; font-size: clamp(.8rem, 3.8vw, 1.2rem) !important; text-shadow: 3px 3px 0 var(--px) !important; }
+.sec-title::after { content: ""; display: block; width: 96px; height: 8px; margin: .9rem auto 0; background: repeating-linear-gradient(90deg, var(--px) 0 8px, transparent 8px 16px); }
+h3 { font-size: clamp(.7rem, 3.2vw, 1rem) !important; }
+
+/* Kartu, kolom isian, dan bingkai: border tebal + bayangan keras */
+[class*="card"], .box, .slider, .cover-date, input, textarea, select {
+  border: 4px solid var(--gold) !important; box-shadow: var(--shadow) !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+}
+button, .btn, .btn-open { border: 4px solid #1a0b33 !important; box-shadow: 4px 4px 0 #000 !important; background: var(--gold) !important; color: #2b1650 !important; font-size: .62rem !important; animation: none !important; }
+button:active, .btn:active, .btn-open:active { transform: translate(4px, 4px); box-shadow: 0 0 0 #000 !important; }
+
+/* Cover */
+.cover-bg { background: conic-gradient(#43207a 25%, #2f1458 0 50%, #43207a 0 75%, #2f1458 0) 0 0 / 32px 32px !important; filter: none !important; animation: none !important; inset: 0 !important; }
+.cover-shade { background: none !important; }
+.cover-intro { color: var(--gold) !important; font-size: clamp(.6rem, 2.6vw, .8rem) !important; }
+.arch { aspect-ratio: 3 / 4; border: 6px solid var(--gold) !important; padding: 0 !important; background: var(--gold) !important; box-shadow: 8px 8px 0 var(--px) !important; }
+.arch img { image-rendering: auto; }
+.arch-ring { display: none !important; }
+.cover-names { color: var(--gold) !important; text-shadow: 4px 4px 0 var(--px) !important; flex-direction: column; gap: .4rem; font-size: clamp(.9rem, 5vw, 1.6rem) !important; }
+.cn .ch { opacity: 1 !important; transform: none !important; filter: none !important; animation: none !important; }
+.cover-date { font-size: clamp(.55rem, 2.4vw, .75rem) !important; background: rgba(0, 0, 0, .35) !important; border-style: dashed !important; }
+.cover-guest strong { font-size: clamp(.7rem, 3vw, .95rem) !important; text-shadow: 2px 2px 0 var(--px) !important; }
+
+/* Galeri */
+.slider { background: #24104a; }
+.slide.cutout { background: #fff0b8 !important; }
+
+/* Pastikan tombol Buka Undangan selalu muncul */
+.ready .cover .btn-open[data-intro] { animation: introIn 1s var(--ease) var(--d, .3s) both !important; }
+.cover .btn-open[data-intro] { opacity: 1 !important; transform: none !important; }
+
+/* Musik latar */
+#ytMusic { position: fixed; left: -9999px; top: 0; width: 200px; height: 200px; }
+#musicBtn { position: fixed; right: 14px; bottom: 14px; z-index: 60; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; padding: 0 !important; font-size: 1.1rem !important; cursor: pointer; }
+
+/* Menu bawah: label lebih sempit supaya tidak menumpuk */
+.bottom-nav button { font-family: 'VT323', monospace !important; font-size: 1.1rem !important; line-height: 1 !important; letter-spacing: 0 !important; padding: 0 2px !important; white-space: nowrap; overflow: hidden; gap: .25rem; }
+.bottom-nav i { font-size: 1.15rem; }
+.bottom-nav { gap: 4px; padding-left: 4px; padding-right: 4px; }
+
+/* Menu bawah: lebih ramping supaya label muat */
+.bottom-nav { gap: 3px; padding-left: 3px; padding-right: 3px; }
+.bottom-nav button { font-size: .95rem !important; border-width: 3px !important; box-shadow: 2px 2px 0 #000 !important; }
+
+/* Tombol musik: di atas menu bawah */
+#musicBtn { bottom: calc(var(--nav-h, 64px) + 14px + env(safe-area-inset-bottom, 0px)); }

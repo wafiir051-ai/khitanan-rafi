@@ -1,0 +1,30 @@
+/* Tema admin: pixel retro (ungu, kuning, pink), selaras undangan */
+*, *::before, *::after { border-radius: 0 !important; }
+body { font-family: 'VT323', monospace; font-size: 20px; line-height: 1.35; background: conic-gradient(#f6f0ff 25%, #ede2ff 0 50%, #f6f0ff 0 75%, #ede2ff 0) 0 0 / 32px 32px; }
+label { font-family: 'VT323', monospace; font-size: 1.05rem; font-weight: 400; }
+input, select, textarea { font-family: 'VT323', monospace; font-size: 1.1rem; border: 3px solid #2b1650; box-shadow: 3px 3px 0 #2b1650; }
+input:focus, select:focus, textarea:focus { outline: 3px solid #ffc93c; }
+h1, h2, h3, .btn, .tab, th, .stat b, .badge, .who { font-family: 'Press Start 2P', monospace !important; font-weight: 400 !important; line-height: 1.7; letter-spacing: 0; }
+h1 { font-size: 1rem; } h2, h3 { font-size: .75rem; }
+.stat b { font-size: 1.1rem; } .stat span, .hint { font-size: 1rem; }
+.btn { font-size: .58rem; padding: .7rem .9rem; border: 3px solid #2b1650; box-shadow: 4px 4px 0 #2b1650; background: #fff; }
+.btn:hover { background: #ffc93c; color: #2b1650; border-color: #2b1650; }
+.btn:active { transform: translate(4px, 4px); box-shadow: none; }
+.btn.primary { background: #5b2a9d; color: #fff; border-color: #2b1650; }
+.btn.primary:hover { background: #7a3fd0; color: #fff; }
+.btn.sm { font-size: .5rem; padding: .45rem .6rem; box-shadow: 3px 3px 0 #2b1650; }
+.login { background: conic-gradient(#43207a 25%, #2f1458 0 50%, #43207a 0 75%, #2f1458 0) 0 0 / 32px 32px; }
+.box { border: 4px solid #ffc93c; box-shadow: 8px 8px 0 #ff6b8b; }
+.box h1 { color: #5b2a9d; text-shadow: 2px 2px 0 #ffc93c; }
+.top { border-bottom: 4px solid #ffc93c; }
+.top .btn { background: transparent; color: #fff; border: 3px solid rgba(255, 255, 255, .6); box-shadow: none; }
+.top .btn:hover { background: #ffc93c; color: #2f1458; }
+.stat, .add, .table-wrap { border: 3px solid #2b1650; box-shadow: 5px 5px 0 #2b1650; }
+.tab { font-size: .55rem; border-bottom: 4px solid transparent; }
+.tab.active { background: #ffc93c; color: #2b1650; border-color: #2b1650; }
+th { font-size: .5rem; background: #efe3ff; color: #2b1650; border-bottom: 3px solid #2b1650; }
+th, td { font-size: 1.05rem; }
+td { font-family: 'VT323', monospace; }
+.badge { font-size: .5rem; border: 2px solid currentColor; }
+dialog { border: 4px solid #2b1650; box-shadow: 8px 8px 0 #ff6b8b; }
+.msg { border: 2px solid currentColor; font-size: 1.05rem; }
