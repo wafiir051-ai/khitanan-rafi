@@ -222,7 +222,7 @@
   /* ---------- Galeri ---------- */
   function gallery() {
     const photos = [
-      ['img/keluarga.png', 'Keluarga Bapak Didik Adeng dan Ibu Lina Lisnawati'], ['img/rafi.jpg', 'Rafi Radhika Alfarizki'], ['img/poster.jpg', 'Poster tasyakuran khitanan Rafi'],
+      ['img/keluarga.png', 'Keluarga Bapak Didik Adeng dan Ibu Lina Lisnawati'], ['img/keluarga1.jpg', 'Keluarga Bapak Didik Adeng dan Ibu Lina Lisnawati'], ['img/rafi.jpg', 'Rafi Radhika Alfarizki'], ['img/poster.jpg', 'Poster tasyakuran khitanan Rafi'],
     ];
     const box = $('#slides'), dots = $('#dots'); let cur = 0, timer;
     const slides = photos.map(([src, alt], i) => {
